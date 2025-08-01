@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shopping - Code Crack Gaming</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1a0028;
+      color: white;
+    }
+
+    header {
+      background-color: #7f00ff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .back-button {
+      margin: 10px;
+      padding: 8px 16px;
+      background-color: #ff00cc;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #e600b3;
+    }
+
+    .shop-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .shop-card {
+      background: linear-gradient(145deg, #290044, #3f0066);
+      border-radius: 20px;
+      padding: 15px;
+      text-align: center;
+      transition: transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    }
+
+    .shop-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .shop-card img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      border-radius: 25px;
+      object-fit: cover;
+    }
+
+    .shop-card h3 {
+      margin: 10px 0 5px;
+      font-size: 1.1rem;
+    }
+
+    .shop-card p {
+      font-size: 0.9rem;
+      color: #d3d3d3;
+    }
+
+    .buy-btn {
+      margin-top: 10px;
+      padding: 6px 12px;
+      background-color: #ff00cc;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .buy-btn:hover {
+      background-color: #cc0099;
+    }
+
+    .special {
+      border: 2px solid gold;
+      background: linear-gradient(145deg, #3e0080, #4d007a);
+      box-shadow: 0 0 15px gold;
+    }
+
+    .special .buy-btn {
+      background-color: gold;
+      color: black;
+      font-weight: bold;
+    }
+
+    .special .buy-btn:hover {
+      background-color: #ffd700;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    Shopping Game Store
+  </header>
+
+  <div class="shop-container">
+    <div class="shop-card">
+        
+      <img src="Aset/token.png" alt="11 Token" />
+      <h3>11 Token</h3>
+      <p>Harga: Rp5.000</p>
+      <button class="buy-btn">Beli</button>
+    </div>
+    <div class="shop-card">
+      <img src="Aset/token.png" alt="20 Token" />
+      <h3>50 Token</h3>
+      <p>Harga: Rp15.000</p>
+      <button class="buy-btn">Beli</button>
+    </div>
+    <div class="shop-card">
+      <img src="Aset/token.png" alt="200 Token" />
+      <h3>110 Token</h3>
+      <p>Harga: Rp50.000</p>
+      <button class="buy-btn">Beli</button>
+    </div>
+    <!-- Paket Spesial -->
+    <div class="shop-card special">
+      <img src="Aset/token.png" alt="Eksklusif" />
+      <h3>Eksklusif 222 Token</h3>
+      <p>+ 2 Paket Game<br>Harga: Rp300.000</p>
+      <button class="buy-btn">Beli Sekarang</button>
+    </div>
+    <div class="shop-card special">
+      <img src="Aset/token.png" alt="Limited" />
+      <h3>Limited 1000 Token</h3>
+      <p>+ Bundle Game Random<br>Harga: Rp500.000</p>
+      <button class="buy-btn">Beli Sekarang</button>
+    </div>
+    <div class="shop-card special">
+      <img src="Aset/token.png" alt="Newbie" />
+      <h3>Newbie Diskon 99%</h3>
+      <p>1 Token Only<br>Harga: Rp500</p>
+      <button class="buy-btn">Buruan!</button>
+    </div>
+  </div>
+
+  <button class="back-button" onclick="window.location.href='angkot4.html'">⬅ Kembali</button>
+</body>
+</html>

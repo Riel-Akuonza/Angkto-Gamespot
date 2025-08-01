@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Layout Table Rapi</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f0f0f8;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .marquee-box {
+      width: 1000px;
+      max-width: 95%;
+      margin-bottom: 20px;
+      border: 2px dashed #9370db;
+      border-radius: 8px;
+      background-color: #fff;
+      padding: 12px 20px;
+      overflow: hidden;
+      position: relative;
+      height: 40px;
+    }
+
+    .marquee-text {
+      position: absolute;
+      white-space: nowrap;
+      color: #4b0082;
+      font-weight: bold;
+      font-size: 18px;
+      animation: slideInOut 20s linear infinite;
+    }
+
+    @keyframes slideInOut {
+      0% {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      20% {
+        opacity: 2;
+      }
+      100% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+    }
+
+    table {
+      width: 1000px;
+      border-collapse: collapse;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+
+    td {
+      border: 1px solid #999;
+      text-align: center;
+      color: #fff;
+    }
+
+    .header {
+      height: 250px;
+      background-color: #6a0dad;
+    }
+
+    .header h1 {
+      font-size: 50px;
+      margin-top: 90px;
+    }
+
+    .nav-row {
+      background-color: #8a2be2;
+      height: 50px;
+    }
+
+    .nav-inner {
+      border-collapse: separate;
+      border-spacing: 10px;
+      width: 100%;
+    }
+
+    .nav-inner td {
+      background-color: #7b2cbf;
+      border-radius: 6px;
+      border: 1px solid #fff;
+      padding: 5px 10px;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .sidebar {
+      width: 200px;
+      height: 520px;
+      background-color: #4b0082;
+    }
+
+    .content {
+      height: 520px;
+      background-color: #9370db;
+      padding: 10px;
+    }
+
+    .footer {
+      height: 30px;
+      background-color: #6a5acd;
+      font-size: 1em;
+    }
+
+    .img-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 15px;
+      background-color: transparent;
+    }
+
+    .img-table td {
+      background-color: #eaeaea;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .img-table img {
+      width: 100%;
+      max-width: 150px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+      margin: auto;
+    }
+
+   /* ===== Mobile Responsiveness - Versi 3 Kolom ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    align-items: stretch;
+  }
+
+  .marquee-box {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .marquee-text {
+    font-size: 14px;
+  }
+
+  table {
+    width: 100% !important;
+  }
+
+  .header h1 {
+    font-size: 24px;
+    margin-top: 40px;
+  }
+
+  .nav-inner td {
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    height: auto;
+    padding: 5px;
+  }
+
+  .img-table {
+    width: 100%;
+    border-spacing: 10px;
+    table-layout: fixed;
+  }
+
+  .img-table td {
+    width: 33.33%;
+    padding: 5px;
+  }
+
+  .img-table img {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .footer {
+    font-size: 0.9em;
+    padding: 5px;
+    text-align: center;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+
+  <div class="marquee-box">
+    <div class="marquee-text">
+      🎮 Disini kamu bisa download game apa saja dengan gratis loh! <b style="color: red;">Ini masih Testimony Ya! jadi kalau masih banyak Bug ya wajar!</b> 🔥
+    </div>
+  </div>
+
+  <table>
+    <tr>
+      <td class="header" colspan="3"><h1>Angkot Gamespot 🎮</h1></td>
+    </tr>
+
+    <tr class="nav-row">
+      <td colspan="3">
+        <table class="nav-inner">
+          <tr>
+            <td><a class="nav-link" href="angkot4.html">Home</a></td>
+            <td><a class="nav-link" href="AngkotDownload.html">Download</a></td>
+            <td><a class="nav-link" href="AngkotShopee.html">Shoping</a></td>
+            <td><a class="nav-link" href="RiwayatAngkot.html">Riwayat</a></td>
+            <td><a class="nav-link" href="ProfilAngkot.html">Account</a></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sidebar">Sidebar Kiri</td>
+      <td class="content">
+        <table class="img-table">
+          <tr>
+            <td><img src="Aset/epep.png" alt="Gambar 1"></td>
+            <td><img src="Aset/Genshin Impact.png" alt="Gambar 2"></td>
+            <td><img src="Aset/MLBB.png" alt="Gambar 3"></td>
+          </tr>
+          <tr>
+            <td><img src="Aset/gta.png" alt="Gambar 4"></td>
+            <td><img src="Aset/Minecraft.png" alt="Gambar 5"></td>
+            <td><img src="Aset/SS game.png" alt="Gambar 6"></td>
+          </tr>
+          <tr>
+            <td><img src="Aset/kucingpeduli.png" alt="Gambar 7"></td>
+            <td><img src="Aset/DAL.png" alt="Gambar 8"></td>
+            <td><img src="Aset/AngkotSimulator.png" alt="Gambar 9"></td>
+          </tr>
+        </table>
+      </td>
+      <td class="sidebar">Sidebar Kanan</td>
+    </tr>
+
+    <tr>
+      <td class="footer" colspan="3"></td>
+    </tr>
+  </table>
+
+</body>
+</html>

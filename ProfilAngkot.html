@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Akun Saya - Code Crack Gaming</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d001a;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #1a0033;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(255, 0, 255, 0.2);
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff66ff;
+      margin-bottom: 25px;
+    }
+
+    .profile-pic {
+      display: block;
+      margin: 0 auto;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border: 4px solid #ff66ff;
+    }
+
+    .info {
+      margin: 20px 0;
+    }
+
+    .info label {
+      display: block;
+      font-weight: bold;
+      margin-top: 12px;
+      color: #aaa;
+    }
+
+    .info span {
+      display: block;
+      font-size: 1rem;
+      margin-top: 3px;
+      color: white;
+    }
+
+    .copy-id {
+      background: #ff00cc;
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      margin-top: 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .copy-id:hover {
+      background: #cc0099;
+    }
+
+    .token-box {
+      background-color: #33004d;
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .token-box h3 {
+      margin: 0;
+      color: #ffccff;
+      font-size: 1.3rem;
+    }
+
+    .token-box span {
+      display: block;
+      font-size: 1.1rem;
+      margin-top: 5px;
+      color: #00ffcc;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .btns button {
+      flex: 1;
+      margin: 0 5px;
+      padding: 10px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 1rem;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-topup {
+      background-color: #00cc66;
+    }
+
+    .btn-topup:hover {
+      background-color: #00994d;
+    }
+
+    .btn-withdraw {
+      background-color: #ff3333;
+    }
+
+    .btn-withdraw:hover {
+      background-color: #cc0000;
+    }
+
+     .back-button {
+      margin: 20px;
+      padding: 8px 16px;
+      background-color: #ff00cc;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #cc0099;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+<button class="back-button" onclick="window.location.href='angkot4.html'">⬅ Kembali</button>
+  <div class="container">
+    <h2>Profil Saya</h2>
+    <img src="Aset/Riel.jpeg" alt="Foto Profil" class="profile-pic" />
+
+    <div class="info">
+      <label>Nickname:</label>
+      <span>RielAkuonza01</span>
+
+      <label>Nama Lengkap:</label>
+      <span>Riel Akuonza</span>
+
+      <label>ID Pengguna:</label>
+      <span id="userId">#1031072</span>
+      <button class="copy-id" onclick="copyID()">Salin ID</button>
+
+      <label>Gmail:</label>
+      <span>rielakuonza@gmail.com</span>
+
+      <label>Tanggal Lahir:</label>
+      <span>03 Mei 2007</span>
+
+      <label>No WhatsApp:</label>
+      <span>+62 812-3456-7890</span>
+    </div>
+
+    <div class="token-box">
+      <h3>Token Dimiliki:</h3>
+      <span>2.450.000 Token = 22.232.000IDR</span>
+    </div>
+
+    <div class="btns">
+      <button class="btn-topup" onclick="window.location.href='topup.html'">Top Up</button>
+      <button class="btn-withdraw" onclick="window.location.href='withdraw.html'">Withdraw</button>
+    </div>
+  </div>
+
+  <script>
+    function copyID() {
+      const userId = document.getElementById('userId').innerText;
+      navigator.clipboard.writeText(userId);
+      alert("ID disalin: " + userId);
+    }
+  </script>
+
+</body>
+</html>
